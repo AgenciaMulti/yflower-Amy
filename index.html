@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margarita Holográfica</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e9bd1e, #000000, #773c04);
+    font-family: Arial, sans-serif;
+    color: #fff;
+    overflow: hidden;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 0 0 12px #00ffff, 0 0 20px #00ffff;
+    font-size: 2em;
+    margin: 28px;
+    text-align: center;
+  }
+
+  p.mensaje {
+    position: relative;
+    z-index: 1;
+    font-size: 1.1em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 0 8px #00ffff;
+    margin: 5px 10px;
+  }
+
+  /* Contenedor del iframe */
+.iframe-wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  max-width: 1200px;
+  aspect-ratio: 16/9;
+  overflow: hidden;   /* 🔹 corta lo que sobresalga */
+  border-radius: 20px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0);
+  background: transparent;
+}
+
+/* Ajustar iframe para ocultar UI */
+iframe {
+  width: 130%;
+  height: 130%;
+  transform: scale(0.9);   /* 🔹 un poco reducido pero visible */
+  transform-origin: center;
+  border: none;
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  background: transparent !important;
+}
+
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .iframe-wrapper {
+      width: 100vw;
+      height: 80vh;
+      aspect-ratio: 9/16;
+    }
+    h1 { font-size: 1.4em; }
+    p.mensaje { font-size: 0.8em; }
+  }
+
+  @media (min-width: 769px) {
+    h1 { font-size: 1.9em; }
+    p.mensaje { font-size: 1.3em; }
+  }
+</style>
+</head>
+<body>
+
+<h1>💛 Te amo Amy, S. 💛</h1>
+<p class="mensaje">Hoy no nos pudimos ver, pero no te olvidé</p>
+
+<div class="iframe-wrapper">
+  <iframe 
+    title="Yellow Flower"
+    allow="autoplay; fullscreen; xr-spatial-tracking"
+    src="https://sketchfab.com/models/79f417814ce6457ca13aae4a69da346a/embed?autospin=0.2&autostart=1&preload=1&transparent=1&ui_infos=0&ui_controls=0&ui_watermark=0&ui_watermark_link=0&ui_hint=0&ui_fullscreen=0&ui_settings=0&ui_help=0&ui_stop=0&ui_vr=0&ui_annotations=0">
+  </iframe>
+</div>
+
+</body>
+</html>
